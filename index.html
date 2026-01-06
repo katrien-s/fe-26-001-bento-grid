@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
 		<link
 			rel="icon"
 			type="image/png"
@@ -12,28 +10,59 @@
 			href="./assets/images/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="style.css" />
-
+		<link rel="stylesheet" href="./assets/fonts/fonts.css" />
 		<title>Frontend Mentor | Bento grid</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style></style>
 	</head>
 	<body>
-		<header>Bento Grid</header>
-		<main>
-			<!-- desktop: grid 4 rows - heights full up automatically, use grid-areas, 4 columns -->
-			Social Media 10x Faster with AI Over 4,000 5-star reviews Manage multiple
-			accounts and platforms. Maintain a consistent posting schedule. Schedule
-			to social media. Optimize post timings to publish content at the perfect
-			time for your audience. Grow followers with non-stop content. >56% faster
-			audience growth Create and schedule content quicker. Write your content
-			using AI.
+		<header>
+			<h1>Bento Grid</h1>
+		</header>
+
+		<main class="wrapper bento-grid">
+			<div class="bento-grid__cell grid-area-1 bg-purple-500 padding-400">
+				<p class="text-preset-1">
+					Social Media <span class="text-yellow-500">10x</span>
+					<span class="italic">Faster</span> with AI
+				</p>
+        <img class="star-rating" src="./assets/images/illustration-five-stars.webp" alt="five star rating">
+				<p class="text-preset-4">Over 4,000 5-star reviews</p>
+			</div>
+			<div class="bento-grid__cell grid-area-2 bg-neutral-100">
+        <img src="./assets/images/illustration-multiple-platforms.webp" alt="" class="multiple-platform">
+				<p class="text-preset-3">Manage multiple accounts and platforms.</p>
+			</div>
+			<div class="bento-grid__cell grid-area-3 bg-yellow-500">
+				<p class="text-preset-3">Maintain a consistent posting schedule.</p>
+			</div>
+			<div class="bento-grid__cell grid-area-4 bg-purple-100">
+				<p class="text-preset-3">Schedule to social media.</p>
+				<p class="text-preset-4">
+					Optimize post timings to publish content at the perfect time for your
+					audience.
+				</p>
+			</div>
+			<div class="bento-grid__cell grid-area-5 bg-purple-500">
+				<p class="text-preset-2">Grow followers with non-stop content.</p>
+			</div>
+			<div class="bento-grid__cell grid-area-6 bg-neutral-100">
+				<p class="text-preset-1">>56%</p>
+				<p class="text-preset-4">faster audience growth</p>
+			</div>
+			<div class="bento-grid__cell grid-area-7 bg-yellow-100">
+				<p class="text-preset-2">
+					Create and schedule content
+					<span class="italic text-purple-500">quicker</span>.
+				</p>
+			</div>
+			<div class="bento-grid__cell grid-area-8 bg-yellow-500">
+				<p class="text-preset-2">Write your content using AI.</p>
+			</div>
 		</main>
 
 		<footer class="attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-			Coded by <a href="#">Your Name Here</a>.
+			Coded by <a href="#">Katrien S.</a>.
 		</footer>
 	</body>
 </html>
