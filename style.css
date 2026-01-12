@@ -85,6 +85,7 @@ img,
 picture {
 	display: block;
 	max-width: 100%;
+	object-fit: cover;
 }
 
 input,
@@ -361,7 +362,7 @@ h1 {
 			'area7 area8';
 	}
 
-	@media (min-width: 45em) {
+	@media (min-width: 55em) {
 		grid-template-areas:
 			'area7 area1 area1 area4'
 			'area7 area1 area1 area4'
@@ -373,7 +374,6 @@ h1 {
 }
 
 .bento-grid__cell {
-	position: relative;
 	border-radius: 10px;
 	padding: var(--padding, var(--padding-200));
 	background-color: hsl(var(--bg-color, var(--clr-purple-100)));
@@ -387,30 +387,105 @@ h1 {
 	place-items: center;
 	gap: var(--spacing-200);
 	text-align: center;
+
+	& p:first-of-type {
+		margin-inline: auto;
+		max-width: 12ch;
+	}
+
+	> img {
+		width: 12rem;
+	}
 }
+
 .grid-area-2 {
 	grid-area: area2;
-	padding-top: calc(66px + var(--spacing-200));
-  
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--spacing-200);
+
 	& > img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 316px;
-		height: 66px;
+		width: 100%;
+		min-height: 4.125rem;
 		object-fit: cover;
 		object-position: left center;
 	}
 }
+
 .grid-area-3 {
 	grid-area: area3;
+	padding-bottom: 0;
+
+	& > img {
+		margin-top: var(--spacing-200);
+		width: 13rem;
+		max-height: 6.5rem;
+		object-position: top;
+
+		@media (min-width: 35em) and (max-width: 45em) {
+			max-height: 100%;
+		}
+
+		@media (max-width: 34em) {
+			max-height: 8.5rem;
+		}
+	}
 }
+
 .grid-area-4 {
 	grid-area: area4;
+	text-align: center;
+	gap: var(--spacing-300);
+	--padding: var(--padding-400);
+
+	@media (min-width: 50em) {
+		text-align: left;
+	}
+
+	& p:nth-of-type(2) {
+		max-width: 30ch;
+		margin-inline: auto;
+	}
+
+	& > img {
+		max-width: 22rem;
+		margin: var(--padding-300) auto;
+
+		@media (min-width: 45em) {
+			object-position: right center;
+		}
+	}
 }
+
 .grid-area-5 {
 	grid-area: area5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	gap: var(--spacing-500);
+	text-align: center;
+	--padding: var(--padding-300);
+
+	> img {
+		height: 12.5rem;
+	}
+
+	p {
+		max-width: 10ch;
+	}
+
+	@media (min-width: 35em) {
+		text-align: left;
+		flex-direction: row;
+	}
+
+	@media (min-width: 45em) {
+		gap: var(--spacing-100);
+	}
 }
+
 .grid-area-6 {
 	grid-area: area6;
 }
@@ -424,18 +499,6 @@ h1 {
 /* ----------------  */
 /* Page Specific     */
 /* ----------------  */
-
-/* Images */
-
-.star-rating {
-	width: 192px;
-}
-
-.multiple-platform {
-	/* how to have an image spread all over teh width */
-	/* width: 316px; */
-	/* height: 66px; */
-}
 
 /* ----------------  */
 /* Layout            */
